@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const PHONE = "923001234567"; // replace with actual WhatsApp number
+const PHONE = "923139999404";
 
 const products = [
   "1121 Basmati Golden Sella",

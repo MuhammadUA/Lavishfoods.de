@@ -2,10 +2,8 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'lavishfoods.com.pk',
-      },
+      { protocol: 'https', hostname: 'lavishfoods.com.pk' },
+      { protocol: 'https', hostname: 'wddhkskdmjfbionlvuaz.supabase.co' },
     ],
   },
 };

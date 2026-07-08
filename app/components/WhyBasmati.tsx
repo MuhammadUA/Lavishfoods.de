@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+const FARM_IMG = "https://lavishfoods.com.pk/assets/farm-hands-Z_SiAFhE.jpg";
+
 const pillars = [
   { label: "GI-Protected Origin", sub: "Certified Basmati region" },
   { label: "Naturally Aromatic", sub: "12+ months aged" },
@@ -6,12 +10,12 @@ const pillars = [
 
 export default function WhyBasmati() {
   return (
-    <section className="bg-[#0d2318] py-24 px-6 border-y border-green-800/30">
+    <section className="bg-[#0d2318] py-24 px-6 md:px-8 border-y border-green-800/30">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <div>
-            <span className="text-xs font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-6">
+            <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-6">
               Why Pakistani Basmati
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">
@@ -20,10 +24,9 @@ export default function WhyBasmati() {
               <span className="text-green-400">rice grows in Punjab.</span>
             </h2>
             <p className="text-green-300/70 text-base leading-relaxed mb-8">
-              Pakistan&apos;s Indus belt — Okara, Sheikhupura, Hafizabad,
-              Sialkot — produces the longest, most aromatic Basmati on earth.
-              Mineral-rich Himalayan meltwater, hot days and cool nights give
-              every grain its signature length, fragrance and post-cook
+              Pakistan&apos;s Indus belt — Okara, Sheikhupura, Hafizabad, Sialkot — produces the
+              longest, most aromatic Basmati on earth. Mineral-rich Himalayan meltwater, hot days
+              and cool nights give every grain its signature length, fragrance and post-cook
               elongation.
             </p>
             <div className="space-y-4">
@@ -41,49 +44,28 @@ export default function WhyBasmati() {
             </div>
           </div>
 
-          {/* Visual card */}
-          <div className="relative">
-            <div className="border border-green-800/40 p-10 bg-[#0a1f15] relative overflow-hidden">
-              {/* decorative */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A84C]/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-green-800/10 rounded-full translate-y-1/2 -translate-x-1/2" />
-
-              <div className="relative z-10">
-                <div className="text-7xl font-serif text-[#C9A84C]/20 leading-none mb-2">
-                  8.30
+          {/* Real farm image */}
+          <div className="relative h-96 lg:h-[500px] overflow-hidden">
+            <Image
+              src={FARM_IMG}
+              alt="Punjab rice farm"
+              fill
+              className="object-cover"
+              unoptimized
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0d2318]/60 to-transparent" />
+            {/* Overlay stats */}
+            <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
+              {[
+                { val: "8.30 mm", label: "Grain Length" },
+                { val: "12+", label: "Months Aged" },
+                { val: "GI", label: "Protected" },
+              ].map((s) => (
+                <div key={s.label} className="bg-[#0a1f15]/80 border border-green-800/40 p-3 text-center">
+                  <div className="text-[#C9A84C] font-serif text-xl">{s.val}</div>
+                  <div className="text-green-500 text-[9px] font-mono tracking-wide uppercase">{s.label}</div>
                 </div>
-                <div className="text-green-400 text-xs font-mono tracking-[0.2em] uppercase mb-8">
-                  mm — 1121 Basmati grain length
-                </div>
-
-                <div className="space-y-6">
-                  {[
-                    { label: "Grain Elongation", val: 95 },
-                    { label: "Aroma Intensity", val: 90 },
-                    { label: "Milling Yield", val: 85 },
-                    { label: "Whiteness Degree", val: 88 },
-                  ].map((m) => (
-                    <div key={m.label}>
-                      <div className="flex justify-between text-xs mb-2">
-                        <span className="text-green-400 font-mono tracking-wide">{m.label}</span>
-                        <span className="text-[#C9A84C]">{m.val}%</span>
-                      </div>
-                      <div className="h-0.5 bg-green-800/40">
-                        <div
-                          className="h-full bg-[#C9A84C]"
-                          style={{ width: `${m.val}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-green-800/30 text-center">
-                  <span className="text-green-500 text-xs font-mono tracking-[0.2em] uppercase">
-                    Punjab · Okara · Pakistan
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

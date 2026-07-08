@@ -1,70 +1,83 @@
-const varieties = [
-  { tag: "Extra Long", name: "1121 Basmati", grain: "8.30 mm", desc: "World's longest basmati grain — prized for elongation, aroma and fluffiness after cooking." },
-  { tag: "Premium Basmati", name: "Super Kernel", grain: "7.20 mm", desc: "Slender, aromatic grain with rich fragrance. Top choice for retail and restaurant supply." },
-  { tag: "Specialty", name: "Super Fine Sella", grain: "7.90 mm", desc: "Parboiled for firmness. Ideal for large-scale catering and food service operations." },
-  { tag: "Long Grain", name: "PK-386", grain: "6.80 mm", desc: "Versatile non-basmati long grain. Cost-effective for volume importers and processors." },
-  { tag: "Long Grain", name: "IRRI-9", grain: "6.40 mm", desc: "High-yield variety with excellent milling outturn. Popular across Middle East and Africa." },
-  { tag: "Long Grain", name: "IRRI-6", grain: "6.20 mm", desc: "Economical bulk variety. Available as white, parboiled sella and 100% broken grades." },
-];
+import Image from "next/image";
+import Link from "next/link";
+import { products } from "../lib/products";
+
+// Show 6 hero products on homepage
+const featured = products.slice(0, 6);
 
 export default function Products() {
   return (
-    <section id="products" className="bg-[#0a1f15] py-24 px-6">
+    <section id="products" className="bg-[#0a1f15] py-24 px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
-            <span className="text-xs font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-4">
+            <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-4">
               Our Paddy Varieties
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif text-white">
+            <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">
               Six cultivars.
               <br />
               <span className="text-green-400">Twelve grades.</span>
             </h2>
           </div>
-          <a
-            href="#contact"
-            className="self-start md:self-auto border border-green-600 text-green-300 font-semibold text-xs tracking-widest uppercase px-5 py-3 hover:bg-green-900/30 transition-colors"
+          <Link
+            href="/products"
+            className="self-start border border-green-600 text-green-300 font-semibold text-[10px] tracking-[0.2em] uppercase px-5 py-3 hover:bg-green-900/30 transition-colors"
           >
             Learn About Rice Grades →
-          </a>
+          </Link>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-green-800/30">
-          {varieties.map((v, i) => (
-            <div
-              key={i}
-              className="bg-[#0a1f15] p-8 group hover:bg-green-900/20 transition-colors duration-300 cursor-default"
+          {featured.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/products/${p.slug}`}
+              className="group bg-[#0a1f15] hover:bg-green-900/20 transition-colors duration-300 block"
             >
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-[#C9A84C] border border-[#C9A84C]/30 px-2 py-1">
-                  {v.tag}
-                </span>
-                <span className="text-green-600 text-xs font-mono">
-                  Grain · {v.grain}
-                </span>
-              </div>
-              <h3 className="text-2xl font-serif text-white mb-3 group-hover:text-green-300 transition-colors">
-                {v.name}
-              </h3>
-              <p className="text-green-400/70 text-sm leading-relaxed">
-                {v.desc}
-              </p>
-              <div className="mt-6 pt-6 border-t border-green-800/30 flex items-center justify-between">
-                <div className="flex gap-1">
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <div
-                      key={n}
-                      className={`h-1 w-6 ${n <= (i === 0 ? 5 : i === 1 ? 5 : i === 2 ? 4 : i === 3 ? 3 : i === 4 ? 3 : 2) ? "bg-[#C9A84C]" : "bg-green-800/40"}`}
-                    />
-                  ))}
+              {/* Product image */}
+              <div className="relative h-52 overflow-hidden">
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f15] via-transparent to-transparent" />
+                <div className="absolute top-3 left-3">
+                  <span className="text-[9px] font-mono tracking-[0.2em] uppercase text-[#C9A84C] bg-[#0a1f15]/80 border border-[#C9A84C]/30 px-2 py-1">
+                    {p.tag.split(" · ")[0]}
+                  </span>
                 </div>
-                <span className="text-green-600 text-xs font-mono">Premium</span>
               </div>
-            </div>
+
+              {/* Card content */}
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-green-600 text-[10px] font-mono">Grain · {p.grain}</span>
+                  <span className="text-green-700 text-[10px] font-mono group-hover:text-[#C9A84C] transition-colors">View →</span>
+                </div>
+                <h3 className="text-xl font-serif text-white group-hover:text-green-300 transition-colors">
+                  {p.name}
+                </h3>
+                <p className="text-green-500/60 text-xs leading-relaxed mt-2 line-clamp-2">
+                  {p.description}
+                </p>
+              </div>
+            </Link>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 border border-green-600 text-green-300 font-semibold text-[10px] tracking-[0.2em] uppercase px-8 py-4 hover:bg-green-900/30 transition-colors"
+          >
+            View All 15 Varieties →
+          </Link>
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@ import WhyBasmati from "./components/WhyBasmati";
 import Processing from "./components/Processing";
 import Infrastructure from "./components/Infrastructure";
 import QualityControl from "./components/QualityControl";
+import Certifications from "./components/Certifications";
 import FeaturedVarieties from "./components/FeaturedVarieties";
 import ExportProcess from "./components/ExportProcess";
 import Packaging from "./components/Packaging";
@@ -29,6 +30,7 @@ export default function Home() {
       <Processing />
       <Infrastructure />
       <QualityControl />
+      <Certifications />
       <FeaturedVarieties />
       <ExportProcess />
       <Packaging />

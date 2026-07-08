@@ -1,4 +1,4 @@
-const WHATSAPP = "https://wa.me/923001234567?text=Hello%2C%20I%27m%20interested%20in%20Lavish%20Foods%20rice%20export.";
+const WHATSAPP = "https://wa.me/923139999404?text=Hello%2C%20I%27m%20interested%20in%20Lavish%20Foods%20rice%20export.";
 
 const links = {
   Products: ["1121 Basmati", "Super Kernel", "PK-386", "IRRI-9", "IRRI-6", "Super Fine Sella"],
