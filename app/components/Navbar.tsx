@@ -118,14 +118,11 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center bg-[#C9A84C] text-[#0a1f15] text-xs font-bold tracking-[0.25em] uppercase py-3 mt-4"
+              href={`mailto:${EMAIL}`}
+              className="block text-center border border-green-700 text-green-300 text-xs font-semibold tracking-[0.25em] uppercase py-3 mt-4 hover:bg-green-900/30 transition-colors"
             >
-              Get Quote on WhatsApp
+              {EMAIL}
             </a>
-            <div className="text-green-600 text-[10px] font-mono text-center">{PHONE}</div>
           </div>
         )}
       </header>
