@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --green-950: #0a1f15;
-  --green-900: #1B4332;
-  --green-800: #2D6A4F;
+  --navy: #060d1b;
+  --navy-mid: #0b1527;
   --gold: #C9A84C;
+  --gold-light: #D4AF57;
 }
 
 * {
@@ -14,8 +14,8 @@
 }
 
 body {
-  background-color: #0a1f15;
-  color: #f0fdf4;
+  background-color: #060d1b;
+  color: #f8fafc;
   font-family: 'Inter', system-ui, sans-serif;
 }
 
@@ -25,63 +25,143 @@ body {
   }
 }
 
-@layer components {
-  .section-label {
-    @apply text-xs font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block;
-  }
-
-  .btn-primary {
-    @apply bg-gold-500 text-green-950 font-semibold px-6 py-3 text-sm tracking-wider uppercase hover:bg-gold-400 transition-colors duration-200;
-  }
-
-  .btn-outline {
-    @apply border border-green-600 text-green-300 font-semibold px-6 py-3 text-sm tracking-wider uppercase hover:bg-green-900 transition-colors duration-200;
-  }
-
-  .card-dark {
-    @apply bg-green-900/20 border border-green-800/40 p-6;
-  }
-
-  .divider {
-    @apply border-t border-green-800/40 my-8;
-  }
+/* ─── Hero entrance animations ─────────────────────────────── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-/* Marquee / ticker animation */
+.hero-line-1 {
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+}
+.hero-line-2 {
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.28s forwards;
+}
+.hero-sub {
+  opacity: 0;
+  animation: heroFadeIn 0.8s ease 0.52s forwards;
+}
+.hero-tags {
+  opacity: 0;
+  animation: heroFadeIn 0.7s ease 0.68s forwards;
+}
+.hero-stats {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease 0.75s forwards;
+}
+.hero-cta {
+  opacity: 0;
+  animation: heroFadeIn 0.7s ease 0.95s forwards;
+}
+
+/* ─── Scroll reveal ─────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* ─── Card hover lift ───────────────────────────────────────── */
+.card-lift {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* ─── Gold underline link ───────────────────────────────────── */
+.gold-link {
+  position: relative;
+}
+.gold-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 1px;
+  background: #C9A84C;
+  transition: width 0.3s ease;
+}
+.gold-link:hover::after { width: 100%; }
+
+/* ─── Marquee / ticker ──────────────────────────────────────── */
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 40s linear infinite;
 }
-
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* Grain texture overlay */
-.grain::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+/* ─── Image shimmer on load ─────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.img-shimmer {
+  background: linear-gradient(90deg, #0b1527 25%, #142035 50%, #0b1527 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
-/* Scroll fade-in */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* ─── Number counter pulse ──────────────────────────────────── */
+@keyframes statPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
+.stat-pop { animation: statPop 0.4s ease; }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Custom scrollbar */
+/* ─── Scrollbar ─────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #0a1f15; }
-::-webkit-scrollbar-thumb { background: #2D6A4F; border-radius: 2px; }
+::-webkit-scrollbar-track { background: #060d1b; }
+::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
