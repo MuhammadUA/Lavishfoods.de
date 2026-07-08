@@ -6,9 +6,9 @@ import { products } from "../lib/products";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rice Varieties — Lavish Foods Premium Pakistani Basmati",
+  title: "Rice Varieties Lavish Foods Premium Pakistani Basmati",
   description:
-    "Twelve premium Pakistani rice grades — 1121 Basmati, Super Kernel, PK-386, IRRI-9, IRRI-6 and more. View specs, packaging options and request a quote.",
+    "Twelve premium Pakistani rice grades 1121 Basmati, Super Kernel, PK-386, IRRI-9, IRRI-6 and more. View specs, packaging options and request a quote.",
 };
 
 const comparison = [
@@ -35,7 +35,7 @@ export default function ProductsPage() {
             Twelve premium rice varieties.
           </h1>
           <p className="text-slate-300/70 text-base max-w-2xl leading-relaxed">
-            From the world&apos;s longest grain 1121 Basmati to economical bulk IRRI lots — every
+            From the world&apos;s longest grain 1121 Basmati to economical bulk IRRI lots every
             grade milled to your exact export specification.
           </p>
         </div>

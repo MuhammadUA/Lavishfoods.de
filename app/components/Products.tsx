@@ -15,7 +15,7 @@ export default function Products() {
           <Reveal>
             <div>
               <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#C9A84C] mb-4 inline-block">
-                — Products
+                Products
               </span>
               <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">
                 Fifteen grades.<br />

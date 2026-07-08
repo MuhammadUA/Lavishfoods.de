@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Certifications — Lavish Foods Quality & Compliance",
+  title: "Certifications Lavish Foods Quality & Compliance",
   description:
     "ISO 22000, HACCP, Halal Authority, SGS Inspected, FDA Registered, SMETA SEDEX. Full certification documentation for every shipment.",
 };
@@ -17,7 +17,7 @@ const certs = [
     name: "ISO 22000",
     subtitle: "Food Safety Management System",
     description:
-      "ISO 22000 is the international standard for food safety management systems. Our certification covers the entire milling, packing and export chain — ensuring every process meets global food safety requirements from paddy to port.",
+      "ISO 22000 is the international standard for food safety management systems. Our certification covers the entire milling, packing and export chain ensuring every process meets global food safety requirements from paddy to port.",
     scope: "Full milling, processing & export operations",
     body: "International Organization for Standardization",
   },
@@ -28,7 +28,7 @@ const certs = [
     name: "HACCP Certified",
     subtitle: "Hazard Analysis & Critical Control Points",
     description:
-      "HACCP is a systematic preventive approach to food safety. Our HACCP plan identifies, evaluates and controls all biological, chemical and physical hazards throughout our milling process — preventing food safety problems before they arise.",
+      "HACCP is a systematic preventive approach to food safety. Our HACCP plan identifies, evaluates and controls all biological, chemical and physical hazards throughout our milling process preventing food safety problems before they arise.",
     scope: "Paddy intake through finished goods dispatch",
     body: "Recognised by FDA and global food safety authorities",
   },
@@ -39,7 +39,7 @@ const certs = [
     name: "Halal Authority",
     subtitle: "Halal Certified Food Production",
     description:
-      "All Lavish Foods rice grades are certified Halal — compliant with Islamic dietary laws and suitable for Muslim consumers worldwide. Our Halal certificate is accepted across GCC, Middle East, Southeast Asia, UK and European markets.",
+      "All Lavish Foods rice grades are certified Halal compliant with Islamic dietary laws and suitable for Muslim consumers worldwide. Our Halal certificate is accepted across GCC, Middle East, Southeast Asia, UK and European markets.",
     scope: "All rice varieties and grades",
     body: "Approved Halal Certification Authority",
   },
@@ -50,19 +50,19 @@ const certs = [
     name: "SGS Inspected",
     subtitle: "Pre-Shipment Third-Party Inspection",
     description:
-      "SGS is the world's leading inspection, verification, testing and certification company. Pre-shipment SGS inspection is available on buyer request — providing independent third-party verification of grain quality, weight and condition before loading.",
+      "SGS is the world's leading inspection, verification, testing and certification company. Pre-shipment SGS inspection is available on buyer request providing independent third-party verification of grain quality, weight and condition before loading.",
     scope: "Per-shipment basis on buyer request",
-    body: "SGS S.A. — World's leading testing & inspection company",
+    body: "SGS S.A. World's leading testing & inspection company",
   },
 ];
 
 const additionalCerts = [
-  { name: "FDA Registered", detail: "US Food and Drug Administration facility registration — required for all exports to the United States of America." },
-  { name: "SMETA / SEDEX", detail: "Sedex Members Ethical Trade Audit — demonstrates our commitment to ethical, responsible supply chain practices." },
-  { name: "Phytosanitary", detail: "Phytosanitary certificate issued per shipment by Pakistan's DPPD — required for rice exports to most countries." },
+  { name: "FDA Registered", detail: "US Food and Drug Administration facility registration required for all exports to the United States of America." },
+  { name: "SMETA / SEDEX", detail: "Sedex Members Ethical Trade Audit demonstrates our commitment to ethical, responsible supply chain practices." },
+  { name: "Phytosanitary", detail: "Phytosanitary certificate issued per shipment by Pakistan's DPPD required for rice exports to most countries." },
   { name: "Certificate of Origin", detail: "EUR.1 for EU markets, Form E for ASEAN, and standard CO issued per shipment for all destinations." },
   { name: "Fumigation Certificate", detail: "Issued per container confirming treatment against pests, accepted at all major ports worldwide." },
-  { name: "SGS Weight Certificate", detail: "Independent weight verification per container — protects both buyer and seller on bulk orders." },
+  { name: "SGS Weight Certificate", detail: "Independent weight verification per container protects both buyer and seller on bulk orders." },
 ];
 
 const docs = [
@@ -118,7 +118,7 @@ export default function CertificationsPage() {
       <div className="pt-40 pb-20 px-6 md:px-8 bg-[#060d1b]">
         <div className="max-w-7xl mx-auto">
           <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#C9A84C] mb-6 inline-block">
-            — Certifications
+            Certifications
           </span>
           <h1 className="text-5xl md:text-7xl font-serif text-white mb-6 leading-[1.02]">
             Certified for<br />
@@ -126,12 +126,12 @@ export default function CertificationsPage() {
           </h1>
           <p className="text-slate-400 text-base max-w-2xl leading-relaxed font-light">
             Every certificate listed here is active, audited and available for buyer review.
-            Documentation is provided with every container — no delays, no exceptions.
+            Documentation is provided with every container no delays, no exceptions.
           </p>
         </div>
       </div>
 
-      {/* Main cert cards — white section */}
+      {/* Main cert cards white section */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto divide-y divide-black/[0.06]">
           {certs.map((c, i) => (
@@ -151,7 +151,7 @@ export default function CertificationsPage() {
                   </div>
                 </div>
               </div>
-              {/* Details — spans 3 cols */}
+              {/* Details spans 3 cols */}
               <div className="lg:col-span-3 p-10 lg:p-12">
                 <p className="text-slate-600 text-base leading-relaxed mb-8">{c.description}</p>
                 <div className="space-y-3 border-t border-black/[0.06] pt-6">
@@ -170,12 +170,12 @@ export default function CertificationsPage() {
         </div>
       </div>
 
-      {/* Additional certs — dark */}
+      {/* Additional certs dark */}
       <div className="py-24 px-6 md:px-8 bg-[#060d1b]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#C9A84C] mb-4 inline-block">
-              — Additional Compliance
+              Additional Compliance
             </span>
             <h2 className="text-3xl font-serif text-white">Full regulatory coverage.</h2>
           </div>
@@ -195,19 +195,19 @@ export default function CertificationsPage() {
         </div>
       </div>
 
-      {/* Documentation list — white */}
+      {/* Documentation list white */}
       <div className="bg-white py-24 px-6 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#C9A84C] mb-6 inline-block">
-              — Per-Shipment Documents
+              Per-Shipment Documents
             </span>
             <h2 className="text-3xl font-serif text-[#060d1b] mb-6">
               Every document, every container.
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed mb-8">
               All documentation is prepared in-house and reviewed before every container is sealed.
-              No delays at customs — documents that stand up at any port.
+              No delays at customs documents that stand up at any port.
             </p>
             <div className="space-y-3">
               {docs.map((d) => (

@@ -6,10 +6,10 @@ const WHATSAPP = "https://wa.me/4915901623270?text=Hello%2C%20I%27m%20interested
 const HERO_BG = "https://lavishfoods.com.pk/assets/hero-field-DpK1PLxD.jpg";
 
 const stats = [
-  { value: 30,    suffix: "+",      label: "Countries served" },
-  { value: 50000, suffix: "+ MT",   label: "Annual capacity" },
-  { value: 15,    suffix: "",       label: "Rice grades" },
-  { value: 24,    suffix: "h",      label: "Quote turnaround" },
+  { value: 30,    suffix: "+",     label: "Countries" },
+  { value: 50000, suffix: "+ MT",  label: "Annual Capacity" },
+  { value: 12,    suffix: "",      label: "Rice Varieties" },
+  { value: 100,   suffix: "%",     label: "Sortex Quality" },
 ];
 
 const trust = ["ISO 22000", "HACCP", "Halal Certified", "SGS Inspected", "FDA Registered"];
@@ -86,7 +86,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pb-0 pt-44 w-full">
 
-        {/* Headline — staggered entrance */}
+        {/* Headline staggered entrance */}
         <h1 className="font-serif text-white leading-[1.0] mb-6">
           <span className="hero-line-1 block text-5xl md:text-7xl lg:text-[88px] font-normal">
             From Punjab fields
@@ -102,7 +102,7 @@ export default function Hero() {
           Shipped on time, every time.
         </p>
 
-        {/* Stats — moved up, compact inline row */}
+        {/* Stats moved up, compact inline row */}
         <div
           ref={statsRef}
           className="hero-stats grid grid-cols-4 border border-white/[0.08] bg-[#060d1b]/60 backdrop-blur-sm mb-8 w-fit"

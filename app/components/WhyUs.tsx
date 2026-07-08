@@ -2,7 +2,7 @@ const reasons = [
   {
     icon: "◈",
     title: "Extra Long Grain",
-    desc: "8.30 mm 1121 Basmati — world's longest, guaranteed grain length on every shipment.",
+    desc: "8.30 mm 1121 Basmati world's longest, guaranteed grain length on every shipment.",
   },
   {
     icon: "◉",
@@ -12,7 +12,7 @@ const reasons = [
   {
     icon: "◧",
     title: "Custom Packing",
-    desc: "Private label, any bag size, any market — BOPP, PP woven, jute, FIBC, cotton.",
+    desc: "Private label, any bag size, any market BOPP, PP woven, jute, FIBC, cotton.",
   },
   {
     icon: "◷",
@@ -47,7 +47,7 @@ export default function WhyUs() {
             </h2>
           </div>
           <p className="text-green-400/70 max-w-sm text-sm leading-relaxed">
-            Premium quality, full documentation, and reliable supply — every
+            Premium quality, full documentation, and reliable supply every
             shipment, every season.
           </p>
         </div>

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gallery — Lavish Foods Rice & Facility Photos",
+  title: "Gallery Lavish Foods Rice & Facility Photos",
   description:
     "Photos of our premium Basmati and IRRI rice varieties, milling facility, paddy farms and packaging operations in Okara, Punjab.",
 };
@@ -39,16 +39,16 @@ const sections = [
     title: "Farm & Origin",
     sub: "From the alluvial soils of Punjab.",
     items: [
-      { src: `${B}/hero-field-DpK1PLxD.jpg`, caption: "Rice fields at dawn — Okara, Punjab", tag: "Origin", href: null },
-      { src: `${B}/farm-hands-Z_SiAFhE.jpg`, caption: "Paddy procurement — direct from farms", tag: "Sourcing", href: null },
+      { src: `${B}/hero-field-DpK1PLxD.jpg`, caption: "Rice fields at dawn Okara, Punjab", tag: "Origin", href: null },
+      { src: `${B}/farm-hands-Z_SiAFhE.jpg`, caption: "Paddy procurement direct from farms", tag: "Sourcing", href: null },
     ],
   },
   {
     title: "Facility & Operations",
     sub: "State-of-the-art milling in Okara.",
     items: [
-      { src: `${B}/facility-IHmjPYm1.jpg`, caption: "Lavish Foods milling facility — Okara", tag: "Infrastructure", href: "/infrastructure" },
-      { src: `${B}/packaging-BNAfPZPr.jpg`, caption: "Packing lines — custom branding available", tag: "Packaging", href: null },
+      { src: `${B}/facility-IHmjPYm1.jpg`, caption: "Lavish Foods milling facility Okara", tag: "Infrastructure", href: "/infrastructure" },
+      { src: `${B}/packaging-BNAfPZPr.jpg`, caption: "Packing lines custom branding available", tag: "Packaging", href: null },
     ],
   },
 ];
@@ -68,7 +68,7 @@ export default function GalleryPage() {
             See what we export.
           </h1>
           <p className="text-slate-300/70 text-base max-w-xl leading-relaxed">
-            Rice varieties, farm origins, milling facility and packaging operations — documented at every stage.
+            Rice varieties, farm origins, milling facility and packaging operations documented at every stage.
           </p>
         </div>
       </div>

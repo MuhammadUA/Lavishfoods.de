@@ -7,17 +7,17 @@ const services = [
   {
     num: "02",
     title: "Private Label",
-    desc: "Your brand, your design — we handle artwork, films, retail-ready BOPP and barcodes.",
+    desc: "Your brand, your design we handle artwork, films, retail-ready BOPP and barcodes.",
   },
   {
     num: "03",
     title: "Contract Farming",
-    desc: "Direct partnerships with Punjab growers — traceable paddy from seed to mill.",
+    desc: "Direct partnerships with Punjab growers traceable paddy from seed to mill.",
   },
   {
     num: "04",
     title: "Custom Packaging",
-    desc: "1kg consumer packs to 1,000kg FIBC — every market regulation supported.",
+    desc: "1kg consumer packs to 1,000kg FIBC every market regulation supported.",
   },
   {
     num: "05",
@@ -47,7 +47,7 @@ export default function WhatWeDo() {
             </h2>
           </div>
           <p className="text-green-400/70 max-w-sm text-sm leading-relaxed">
-            Beyond milling and shipping — we partner with growers, packers,
+            Beyond milling and shipping we partner with growers, packers,
             retailers and importers across the entire value chain.
           </p>
         </div>

@@ -4,9 +4,9 @@ import Reveal from "./Reveal";
 const FARM_IMG = "https://lavishfoods.com.pk/assets/farm-hands-Z_SiAFhE.jpg";
 
 const pillars = [
-  { label: "GI-Protected Origin", sub: "Certified Basmati growing region — Punjab, Pakistan" },
+  { label: "GI-Protected Origin", sub: "Certified Basmati growing region Punjab, Pakistan" },
   { label: "Naturally Aromatic", sub: "12+ months aged · signature post-cook elongation" },
-  { label: "Longest Grain", sub: "8.30 mm — the 1121 cultivar, world benchmark" },
+  { label: "Longest Grain", sub: "8.30 mm the 1121 cultivar, world benchmark" },
 ];
 
 export default function WhyBasmati() {
@@ -19,7 +19,7 @@ export default function WhyBasmati() {
           <div>
             <Reveal>
               <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#C9A84C] mb-6 inline-block">
-                — Why Pakistani Basmati
+                Why Pakistani Basmati
               </span>
               <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">
                 The world&apos;s finest<br />

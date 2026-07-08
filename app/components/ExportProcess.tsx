@@ -21,11 +21,11 @@ const docs = [
 
 const terms = [
   { label: "Minimum Order", value: "1× 20ft container (~25 MT)" },
-  { label: "Trial Orders", value: "Available — discuss" },
+  { label: "Trial Orders", value: "Available discuss" },
   { label: "Payment Terms", value: "LC at Sight · TT · DP" },
   { label: "Lead Time", value: "7–25 days after confirmation" },
   { label: "Inspection", value: "SGS Third-Party (buyer's choice)" },
-  { label: "Private Label", value: "Available — 4 to 45 working days" },
+  { label: "Private Label", value: "Available 4 to 45 working days" },
   { label: "Shipment Terms", value: "FOB · CFR · CIF" },
   { label: "Port of Loading", value: "Karachi · Port Qasim, Pakistan" },
 ];

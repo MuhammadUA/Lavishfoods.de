@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import CertBar from "./components/CertBar";
 import Products from "./components/Products";
 import WhyUs from "./components/WhyUs";
 import WhatWeDo from "./components/WhatWeDo";
@@ -22,7 +21,6 @@ export default function Home() {
     <main className="bg-[#060d1b] text-white overflow-x-hidden">
       <Navbar />
       <Hero />
-      <CertBar />
       <Products />
       <WhyUs />
       <WhatWeDo />

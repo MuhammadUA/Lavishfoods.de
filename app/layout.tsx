@@ -6,23 +6,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Lavish Foods — Premium Pakistani Basmati Rice Exporter",
+  title: "Lavish Foods Premium Pakistani Basmati Rice Exporter",
   description:
     "Lavish Foods exports premium 1121 Basmati, Super Kernel, PK-386 & IRRI rice from Okara, Punjab, Pakistan to UAE, UK, USA, Saudi Arabia & 30+ countries. ISO, HACCP, HALAL certified.",
   metadataBase: new URL("https://lavishfoods.de"),
   openGraph: {
-    title: "Lavish Foods — Premium Pakistani Basmati Rice Exporter",
+    title: "Lavish Foods Premium Pakistani Basmati Rice Exporter",
     description:
-      "Premium Pakistani Basmati rice exporter — 1121, Super Kernel, PK-386, IRRI varieties.",
+      "Premium Pakistani Basmati rice exporter 1121, Super Kernel, PK-386, IRRI varieties.",
     siteName: "Lavish Foods",
     type: "website",
     url: "https://lavishfoods.de",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lavish Foods — Premium Pakistani Basmati Rice Exporter",
+    title: "Lavish Foods Premium Pakistani Basmati Rice Exporter",
     description:
-      "Premium Pakistani Basmati rice exporter — 1121, Super Kernel, PK-386, IRRI varieties.",
+      "Premium Pakistani Basmati rice exporter 1121, Super Kernel, PK-386, IRRI varieties.",
   },
   keywords: [
     "basmati rice exporter",

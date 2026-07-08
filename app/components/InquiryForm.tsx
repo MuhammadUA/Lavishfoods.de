@@ -41,7 +41,7 @@ export default function InquiryForm() {
 
   const buildWhatsApp = () => {
     const text = [
-      `*New Inquiry — Lavish Foods (lavishfoods.de)*`,
+      `*New Inquiry Lavish Foods (lavishfoods.de)*`,
       ``,
       `Name: ${form.name}`,
       `Company: ${form.company}`,
@@ -83,7 +83,7 @@ export default function InquiryForm() {
               {[
                 { icon: "◷", label: "Response within 24 hours" },
                 { icon: "◉", label: "No commitment required" },
-                { icon: "◎", label: "Confidential — your data stays with us" },
+                { icon: "◎", label: "Confidential your data stays with us" },
                 { icon: "◈", label: "Opens WhatsApp with all details pre-filled" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">

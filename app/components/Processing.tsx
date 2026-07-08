@@ -1,7 +1,7 @@
 const steps = [
   { num: "01", title: "Paddy Procurement", sub: "Direct from Punjab farms" },
   { num: "02", title: "Paddy Drying", sub: "Moisture controlled to 13%" },
-  { num: "03", title: "Husking", sub: "Rubber roll — <0.5% breakage" },
+  { num: "03", title: "Husking", sub: "Rubber roll <0.5% breakage" },
   { num: "04", title: "Polishing", sub: "Multi-stage to bright finish" },
   { num: "05", title: "Grading", sub: "Length & thickness sorted" },
   { num: "06", title: "Optical Sorting", sub: "99.9% accuracy color sort" },

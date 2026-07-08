@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(params.slug);
   if (!product) return {};
   return {
-    title: `${product.name} — Lavish Foods`,
+    title: `${product.name} Lavish Foods`,
     description: product.description,
   };
 }
@@ -191,7 +191,7 @@ export default function ProductDetailPage({ params }: Props) {
             <div className="border border-[#C9A84C]/20 bg-[#C9A84C]/5 p-6">
               <h3 className="text-white font-serif text-xl mb-2">Request Quotation</h3>
               <p className="text-slate-300/70 text-sm leading-relaxed mb-5">
-                Send us your requirements — quantity, destination, and packaging — and receive a
+                Send us your requirements quantity, destination, and packaging and receive a
                 detailed quotation within 24 hours.
               </p>
               <a

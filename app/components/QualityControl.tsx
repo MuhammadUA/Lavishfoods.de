@@ -96,7 +96,7 @@ export default function QualityControl() {
                 SGS Pre-shipment
               </div>
               <p className="text-green-300/70 text-xs leading-relaxed">
-                Third-party SGS inspection available on buyer request — your
+                Third-party SGS inspection available on buyer request your
                 guarantee in writing, with every container.
               </p>
             </div>

@@ -20,7 +20,7 @@ const offices = [
   },
   {
     label: "Origin / Mill",
-    address: "Pakistan — details on request",
+    address: "Pakistan details on request",
     phone: null,
     flag: "🌾",
   },
@@ -52,12 +52,12 @@ const links = {
 export default function Footer() {
   return (
     <footer className="bg-[#030810] border-t border-white/[0.06]">
-      {/* CTA strip — white for bold contrast */}
+      {/* CTA strip white for bold contrast */}
       <div className="bg-white py-12 px-6 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-[#060d1b] font-serif text-2xl mb-1">Ready to start your first order?</h3>
-            <p className="text-slate-400 text-sm">Send us your specifications — quotation within 24 hours.</p>
+            <p className="text-slate-400 text-sm">Send us your specifications quotation within 24 hours.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer"
@@ -103,7 +103,7 @@ export default function Footer() {
             <div className="text-white font-serif text-lg mb-1">Lavish Foods</div>
             <div className="text-[#C9A84C] text-[9px] font-mono tracking-[0.25em] uppercase mb-4">Europe · Germany</div>
             <p className="text-slate-500 text-sm leading-relaxed mb-4">
-              Premium Pakistani Basmati rice — distributed from Germany. ISO 22000 · HACCP · HALAL certified. Shipping to 30+ countries.
+              Premium Pakistani Basmati rice distributed from Germany. ISO 22000 · HACCP · HALAL certified. Shipping to 30+ countries.
             </p>
             <div className="space-y-1">
               <a href={`mailto:${EMAIL}`} className="block text-slate-500 text-xs font-mono hover:text-slate-300 transition-colors">

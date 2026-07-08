@@ -21,11 +21,11 @@ export default function Infrastructure() {
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">
               State-of-the-art milling
               <br />
-              <span className="text-slate-300">facility — Okara, Punjab</span>
+              <span className="text-slate-300">facility Okara, Punjab</span>
             </h2>
             <p className="text-slate-300/70 text-base leading-relaxed mb-8">
               Modern husking units, parboiling and steaming lines, dedicated reprocessing unit,
-              optical color sorters and a fully equipped quality control lab — every grain audited
+              optical color sorters and a fully equipped quality control lab every grain audited
               before it leaves our floor.
             </p>
             <div className="grid grid-cols-2 gap-px bg-green-800/30">
