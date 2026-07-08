@@ -19,7 +19,7 @@ export default function Processing() {
               Rice Processing
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-white">
-              From paddy to port —
+              From paddy to port,
               <br />
               <span className="text-green-400">eight precise stages.</span>
             </h2>
