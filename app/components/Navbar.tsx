@@ -3,16 +3,17 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const PHONE = "+92 313 9999404";
-const EMAIL = "Lavishfoods313@gmail.com";
-const WHATSAPP = "https://wa.me/923139999404?text=Hello%2C%20I%27m%20interested%20in%20Lavish%20Foods%20rice%20export.";
+const PHONE_DE = "+49 1590 1623270";
+const PHONE_US = "+1 (778) 900-6780";
+const EMAIL = "contact@lavishfoods.de";
+const WHATSAPP = "https://wa.me/4915901623270?text=Hello%2C%20I%27m%20interested%20in%20Lavish%20Foods%20rice%20export.";
 const LOGO = "https://lavishfoods.com.pk/assets/logo-DaH6OKh_.png";
 
 const navLinks = [
   { href: "/products", label: "Products" },
-  { href: "/#services", label: "Services" },
-  { href: "/#quality", label: "Quality" },
-  { href: "/#export", label: "Export" },
+  { href: "/infrastructure", label: "Infrastructure" },
+  { href: "/certifications", label: "Certifications" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -31,10 +32,12 @@ export default function Navbar() {
       {/* Top info bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#0d2318] border-b border-green-800/40 py-2 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-[11px] font-mono tracking-wide">
-          <div className="flex items-center gap-4 text-green-400">
-            <a href={`tel:${PHONE}`} className="hover:text-white transition-colors">{PHONE}</a>
-            <span className="text-green-700">·</span>
-            <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors hidden sm:block">{EMAIL}</a>
+          <div className="flex items-center gap-3 text-green-400">
+            <a href={`tel:${PHONE_DE}`} className="hover:text-white transition-colors">{PHONE_DE}</a>
+            <span className="text-green-700 hidden sm:block">·</span>
+            <a href={`tel:${PHONE_US}`} className="hover:text-white transition-colors hidden sm:block">{PHONE_US}</a>
+            <span className="text-green-700 hidden md:block">·</span>
+            <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors hidden md:block">{EMAIL}</a>
           </div>
           <div className="hidden md:flex items-center gap-2 text-green-500 tracking-[0.2em] uppercase text-[10px]">
             ISO 22000 <span className="text-green-700">·</span> HACCP <span className="text-green-700">·</span> HALAL <span className="text-green-700">·</span> SGS INSPECTED

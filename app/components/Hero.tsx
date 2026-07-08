@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 
-const WHATSAPP = "https://wa.me/923139999404?text=Hello%2C%20I%27m%20interested%20in%20Lavish%20Foods%20rice%20export.";
+const WHATSAPP = "https://wa.me/4915901623270?text=Hello%2C%20I%27m%20interested%20in%20Lavish%20Foods%20rice%20export.";
 const HERO_BG = "https://lavishfoods.com.pk/assets/hero-field-DpK1PLxD.jpg";
 
 const stats = [
