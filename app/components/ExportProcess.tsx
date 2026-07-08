@@ -32,28 +32,28 @@ const terms = [
 
 export default function ExportProcess() {
   return (
-    <section id="export" className="bg-[#0a1f15] py-24 px-6">
+    <section id="export" className="bg-[#060d1b] py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-4">
+          <span className="text-xs font-mono tracking-[0.25em] uppercase text-slate-300 border border-green-800 px-3 py-1 inline-block mb-4">
             Export Process
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">
             From inquiry to delivery
             <br />
-            <span className="text-green-400">in four steps.</span>
+            <span className="text-slate-300">in four steps.</span>
           </h2>
         </div>
 
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-green-800/20 mb-16">
           {steps.map((s) => (
-            <div key={s.num} className="bg-[#0a1f15] p-8 hover:bg-green-900/10 transition-colors group">
+            <div key={s.num} className="bg-[#060d1b] p-8 hover:bg-green-900/10 transition-colors group">
               <div className="text-[#C9A84C]/25 text-5xl font-serif font-bold leading-none mb-6">
                 {s.num}
               </div>
-              <h3 className="text-white font-serif text-xl mb-1 group-hover:text-green-300 transition-colors">
+              <h3 className="text-white font-serif text-xl mb-1 group-hover:text-slate-300 transition-colors">
                 {s.title}
               </h3>
               <div className="text-[#C9A84C] text-xs font-mono tracking-wide mb-3">{s.sub}</div>
@@ -65,9 +65,9 @@ export default function ExportProcess() {
         {/* Docs + Terms */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Documentation */}
-          <div className="border border-green-800/40">
-            <div className="border-b border-green-800/40 px-6 py-4">
-              <span className="text-green-400 text-xs font-mono tracking-[0.2em] uppercase">
+          <div className="border border-white/[0.08]">
+            <div className="border-b border-white/[0.08] px-6 py-4">
+              <span className="text-slate-300 text-xs font-mono tracking-[0.2em] uppercase">
                 Documentation Provided
               </span>
             </div>
@@ -77,16 +77,16 @@ export default function ExportProcess() {
                   <svg className="w-4 h-4 text-[#C9A84C] shrink-0" fill="none" viewBox="0 0 16 16">
                     <path d="M3 8l4 4 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  <span className="text-green-300 text-sm">{d}</span>
+                  <span className="text-slate-300 text-sm">{d}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* MOQ & Terms */}
-          <div className="border border-green-800/40">
-            <div className="border-b border-green-800/40 px-6 py-4">
-              <span className="text-green-400 text-xs font-mono tracking-[0.2em] uppercase">
+          <div className="border border-white/[0.08]">
+            <div className="border-b border-white/[0.08] px-6 py-4">
+              <span className="text-slate-300 text-xs font-mono tracking-[0.2em] uppercase">
                 MOQ &amp; Trade Terms
               </span>
             </div>
@@ -98,7 +98,7 @@ export default function ExportProcess() {
                 </div>
               ))}
             </div>
-            <div className="p-6 border-t border-green-800/40">
+            <div className="p-6 border-t border-white/[0.08]">
               <a
                 href={WHATSAPP}
                 target="_blank"

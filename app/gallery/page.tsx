@@ -55,19 +55,19 @@ const sections = [
 
 export default function GalleryPage() {
   return (
-    <main className="bg-[#0a1f15] text-white min-h-screen">
+    <main className="bg-[#060d1b] text-white min-h-screen">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-36 pb-16 px-6 md:px-8 bg-[#0d2318] border-b border-green-800/30">
+      <div className="pt-36 pb-16 px-6 md:px-8 bg-[#0b1527] border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto">
-          <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-6">
+          <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-slate-300 border border-green-800 px-3 py-1 inline-block mb-6">
             Gallery
           </span>
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-4">
             See what we export.
           </h1>
-          <p className="text-green-400/70 text-base max-w-xl leading-relaxed">
+          <p className="text-slate-300/70 text-base max-w-xl leading-relaxed">
             Rice varieties, farm origins, milling facility and packaging operations — documented at every stage.
           </p>
         </div>
@@ -79,19 +79,19 @@ export default function GalleryPage() {
           {sections.map((section) => (
             <div key={section.title}>
               {/* Section header */}
-              <div className="flex items-end justify-between mb-8 border-b border-green-800/30 pb-6">
+              <div className="flex items-end justify-between mb-8 border-b border-white/[0.08] pb-6">
                 <div>
                   <h2 className="text-2xl font-serif text-white">{section.title}</h2>
-                  <p className="text-green-500/70 text-sm mt-1">{section.sub}</p>
+                  <p className="text-slate-500/70 text-sm mt-1">{section.sub}</p>
                 </div>
-                <span className="text-green-700 text-xs font-mono">{section.items.length} photos</span>
+                <span className="text-slate-600 text-xs font-mono">{section.items.length} photos</span>
               </div>
 
               {/* Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-green-800/20">
                 {section.items.map((item) => {
                   const Inner = (
-                    <div className="bg-[#0a1f15] group relative overflow-hidden">
+                    <div className="bg-[#060d1b] group relative overflow-hidden">
                       <div className="relative h-44 overflow-hidden">
                         <Image
                           src={item.src}
@@ -102,20 +102,20 @@ export default function GalleryPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f15] via-transparent to-transparent" />
                         <div className="absolute top-2 left-2">
-                          <span className="text-[9px] font-mono tracking-[0.1em] uppercase text-[#C9A84C] bg-[#0a1f15]/80 px-2 py-0.5">
+                          <span className="text-[9px] font-mono tracking-[0.1em] uppercase text-[#C9A84C] bg-[#060d1b]/80 px-2 py-0.5">
                             {item.tag}
                           </span>
                         </div>
                         {item.href && (
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span className="text-white text-[10px] font-mono tracking-[0.2em] uppercase bg-[#0a1f15]/70 px-3 py-1.5">
+                            <span className="text-white text-[10px] font-mono tracking-[0.2em] uppercase bg-[#060d1b]/70 px-3 py-1.5">
                               View Details →
                             </span>
                           </div>
                         )}
                       </div>
                       <div className="px-3 py-3">
-                        <p className="text-green-300 text-xs leading-snug group-hover:text-white transition-colors">{item.caption}</p>
+                        <p className="text-slate-300 text-xs leading-snug group-hover:text-white transition-colors">{item.caption}</p>
                       </div>
                     </div>
                   );
@@ -135,10 +135,10 @@ export default function GalleryPage() {
       </div>
 
       {/* CTA */}
-      <div className="py-16 px-6 md:px-8 bg-[#0d2318] border-t border-green-800/30 text-center">
+      <div className="py-16 px-6 md:px-8 bg-[#0b1527] border-t border-white/[0.08] text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-serif text-white mb-3">Request samples or spec sheets</h2>
-          <p className="text-green-400/70 text-sm mb-8">
+          <p className="text-slate-300/70 text-sm mb-8">
             See any variety you&apos;d like to order? Send us your target market and quantity and receive a quotation within 24 hours.
           </p>
           <Link href="/products"

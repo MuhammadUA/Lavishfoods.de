@@ -9,10 +9,10 @@ const certs = [
 
 export default function Certifications() {
   return (
-    <section className="bg-[#0d2318] py-20 px-6 md:px-8 border-y border-green-800/30">
+    <section className="bg-[#0b1527] py-20 px-6 md:px-8 border-y border-white/[0.08]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-4">
+          <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-slate-300 border border-green-800 px-3 py-1 inline-block mb-4">
             Certifications
           </span>
           <h2 className="text-3xl md:text-4xl font-serif text-white">
@@ -39,7 +39,7 @@ export default function Certifications() {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-green-800/30 pt-8 text-center">
+        <div className="mt-12 border-t border-white/[0.08] pt-8 text-center">
           <p className="text-green-500/60 text-xs font-mono tracking-wide">
             SGS Inspected · FDA Registered · HACCP · ISO 22000 · Halal Authority · SMETA SEDEX
           </p>

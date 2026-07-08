@@ -47,15 +47,15 @@ export default function ProductDetailPage({ params }: Props) {
   ];
 
   return (
-    <main className="bg-[#0a1f15] text-white min-h-screen">
+    <main className="bg-[#060d1b] text-white min-h-screen">
       <Navbar />
 
       {/* Back link */}
-      <div className="pt-28 pb-0 px-6 md:px-8 bg-[#0d2318] border-b border-green-800/30">
+      <div className="pt-28 pb-0 px-6 md:px-8 bg-[#0b1527] border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-green-500 hover:text-green-300 text-[11px] font-mono tracking-[0.2em] uppercase transition-colors mb-6 block"
+            className="inline-flex items-center gap-2 text-green-500 hover:text-slate-300 text-[11px] font-mono tracking-[0.2em] uppercase transition-colors mb-6 block"
           >
             ← All Varieties
           </Link>
@@ -73,7 +73,7 @@ export default function ProductDetailPage({ params }: Props) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d2318]/40 to-transparent" />
               <div className="absolute top-4 left-4">
-                <span className="text-[9px] font-mono tracking-[0.2em] uppercase text-[#C9A84C] bg-[#0a1f15]/80 border border-[#C9A84C]/30 px-2 py-1">
+                <span className="text-[9px] font-mono tracking-[0.2em] uppercase text-[#C9A84C] bg-[#060d1b]/80 border border-[#C9A84C]/30 px-2 py-1">
                   {product.tag.split(" · ")[0]}
                 </span>
               </div>
@@ -90,7 +90,7 @@ export default function ProductDetailPage({ params }: Props) {
               <div className="text-green-500 text-xs font-mono tracking-[0.2em] mb-6">
                 GRAIN · {product.grain}
               </div>
-              <p className="text-green-300/70 text-base leading-relaxed mb-8">
+              <p className="text-slate-300/70 text-base leading-relaxed mb-8">
                 {product.description}
               </p>
 
@@ -108,12 +108,12 @@ export default function ProductDetailPage({ params }: Props) {
                   href={`${WHATSAPP_BASE}${encodeURIComponent(`Please send me the spec sheet for ${product.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-green-600 text-green-300 font-semibold text-[11px] tracking-[0.2em] uppercase px-6 py-4 hover:bg-green-900/30 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 border border-green-600 text-slate-300 font-semibold text-[11px] tracking-[0.2em] uppercase px-6 py-4 hover:bg-green-900/30 transition-colors"
                 >
                   Download Spec Sheet
                 </a>
               </div>
-              <p className="text-green-600 text-[10px] font-mono">
+              <p className="text-slate-500 text-[10px] font-mono">
                 Spec sheets sent on request via WhatsApp/email within 24 hours.
               </p>
 
@@ -137,15 +137,15 @@ export default function ProductDetailPage({ params }: Props) {
           {/* Rice Characteristics */}
           <div>
             <div className="mb-6">
-              <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-3">
+              <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-slate-300 border border-green-800 px-3 py-1 inline-block mb-3">
                 Rice Characteristics
               </span>
-              <p className="text-green-600 text-xs font-mono">
+              <p className="text-slate-500 text-xs font-mono">
                 100% Sortex Quality · Premium Export Grade
               </p>
             </div>
 
-            <div className="border border-green-800/40 divide-y divide-green-800/20">
+            <div className="border border-white/[0.08] divide-y divide-green-800/20">
               {specRows.map((row) => (
                 <div key={row.label} className="flex justify-between items-center px-5 py-3.5 hover:bg-green-900/10 transition-colors">
                   <span className="text-green-500 text-xs font-mono tracking-wide uppercase">{row.label}</span>
@@ -157,9 +157,9 @@ export default function ProductDetailPage({ params }: Props) {
 
           {/* Available Packing + Request */}
           <div className="space-y-6">
-            <div className="border border-green-800/40">
-              <div className="border-b border-green-800/40 px-5 py-4">
-                <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-green-400">
+            <div className="border border-white/[0.08]">
+              <div className="border-b border-white/[0.08] px-5 py-4">
+                <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-slate-300">
                   Available Packing
                 </span>
               </div>
@@ -168,7 +168,7 @@ export default function ProductDetailPage({ params }: Props) {
                   {product.packing.map((pk) => (
                     <span
                       key={pk}
-                      className="border border-green-700/40 text-green-300 text-xs font-mono px-3 py-1.5"
+                      className="border border-green-700/40 text-slate-300 text-xs font-mono px-3 py-1.5"
                     >
                       {pk}
                     </span>
@@ -190,7 +190,7 @@ export default function ProductDetailPage({ params }: Props) {
             {/* Request quotation */}
             <div className="border border-[#C9A84C]/20 bg-[#C9A84C]/5 p-6">
               <h3 className="text-white font-serif text-xl mb-2">Request Quotation</h3>
-              <p className="text-green-400/70 text-sm leading-relaxed mb-5">
+              <p className="text-slate-300/70 text-sm leading-relaxed mb-5">
                 Send us your requirements — quantity, destination, and packaging — and receive a
                 detailed quotation within 24 hours.
               </p>
@@ -205,7 +205,7 @@ export default function ProductDetailPage({ params }: Props) {
             </div>
 
             {/* Certifications mini */}
-            <div className="border border-green-800/40 p-5">
+            <div className="border border-white/[0.08] p-5">
               <div className="flex flex-wrap gap-2">
                 {["ISO 22000", "HACCP", "Halal Certified", "SGS Inspected", "FDA Compliant"].map((c) => (
                   <span key={c} className="flex items-center gap-1.5 text-green-500 text-[10px] font-mono">
@@ -222,7 +222,7 @@ export default function ProductDetailPage({ params }: Props) {
       </div>
 
       {/* More Varieties */}
-      <div className="py-20 px-6 md:px-8 bg-[#0d2318] border-t border-green-800/30">
+      <div className="py-20 px-6 md:px-8 bg-[#0b1527] border-t border-white/[0.08]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-serif text-white mb-8">More Varieties</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-green-800/20">
@@ -230,7 +230,7 @@ export default function ProductDetailPage({ params }: Props) {
               <Link
                 key={p.slug}
                 href={`/products/${p.slug}`}
-                className="group bg-[#0d2318] hover:bg-green-900/15 transition-colors block"
+                className="group bg-[#0b1527] hover:bg-green-900/15 transition-colors block"
               >
                 <div className="relative h-36 overflow-hidden">
                   <Image
@@ -243,8 +243,8 @@ export default function ProductDetailPage({ params }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0d2318] to-transparent" />
                 </div>
                 <div className="p-4">
-                  <div className="text-green-600 text-[9px] font-mono mb-1">Grain · {p.grain}</div>
-                  <div className="text-white text-sm font-serif group-hover:text-green-300 transition-colors leading-snug">
+                  <div className="text-slate-500 text-[9px] font-mono mb-1">Grain · {p.grain}</div>
+                  <div className="text-white text-sm font-serif group-hover:text-slate-300 transition-colors leading-snug">
                     {p.name}
                   </div>
                   <div className="text-[#C9A84C] text-[10px] font-mono mt-2 group-hover:underline">VIEW →</div>

@@ -61,20 +61,20 @@ export default function InquiryForm() {
   };
 
   return (
-    <section id="contact" className="bg-[#0a1f15] py-24 px-6">
+    <section id="contact" className="bg-[#060d1b] py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left */}
           <div>
-            <span className="text-xs font-mono tracking-[0.25em] uppercase text-green-400 border border-green-800 px-3 py-1 inline-block mb-6">
+            <span className="text-xs font-mono tracking-[0.25em] uppercase text-slate-300 border border-green-800 px-3 py-1 inline-block mb-6">
               Inquiry
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">
               Let&apos;s talk about
               <br />
-              <span className="text-green-400">your next shipment.</span>
+              <span className="text-slate-300">your next shipment.</span>
             </h2>
-            <p className="text-green-300/70 text-base leading-relaxed mb-10">
+            <p className="text-slate-300/70 text-base leading-relaxed mb-10">
               Fill in your details and your inquiry will be sent directly to our
               WhatsApp export desk. We respond within 24 hours.
             </p>
@@ -88,13 +88,13 @@ export default function InquiryForm() {
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">
                   <span className="text-[#C9A84C] font-mono">{item.icon}</span>
-                  <span className="text-green-300 text-sm">{item.label}</span>
+                  <span className="text-slate-300 text-sm">{item.label}</span>
                 </div>
               ))}
             </div>
 
             {/* LF badge */}
-            <div className="mt-12 inline-flex items-center gap-4 border border-green-800/40 px-6 py-4">
+            <div className="mt-12 inline-flex items-center gap-4 border border-white/[0.08] px-6 py-4">
               <div className="w-10 h-10 bg-[#C9A84C] flex items-center justify-center">
                 <span className="text-[#0a1f15] font-bold font-serif">LF</span>
               </div>
@@ -106,9 +106,9 @@ export default function InquiryForm() {
           </div>
 
           {/* Form */}
-          <div className="border border-green-800/40">
-            <div className="border-b border-green-800/40 px-6 py-4">
-              <span className="text-green-400 text-xs font-mono tracking-[0.2em] uppercase">
+          <div className="border border-white/[0.08]">
+            <div className="border-b border-white/[0.08] px-6 py-4">
+              <span className="text-slate-300 text-xs font-mono tracking-[0.2em] uppercase">
                 Export Inquiry Form
               </span>
             </div>
@@ -123,7 +123,7 @@ export default function InquiryForm() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full bg-[#0d2318] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
+                    className="w-full bg-[#0b1527] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
                     placeholder="Abdul Waheed"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function InquiryForm() {
                     name="company"
                     value={form.company}
                     onChange={handleChange}
-                    className="w-full bg-[#0d2318] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
+                    className="w-full bg-[#0b1527] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
                     placeholder="Your company"
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function InquiryForm() {
                   name="country"
                   value={form.country}
                   onChange={handleChange}
-                  className="w-full bg-[#0d2318] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
+                  className="w-full bg-[#0b1527] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
                   placeholder="Germany"
                 />
               </div>
@@ -164,7 +164,7 @@ export default function InquiryForm() {
                   name="product"
                   value={form.product}
                   onChange={handleChange}
-                  className="w-full bg-[#0d2318] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600"
+                  className="w-full bg-[#0b1527] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600"
                 >
                   <option value="">Select a product…</option>
                   {products.map((p) => (
@@ -183,7 +183,7 @@ export default function InquiryForm() {
                   name="quantity"
                   value={form.quantity}
                   onChange={handleChange}
-                  className="w-full bg-[#0d2318] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
+                  className="w-full bg-[#0b1527] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700"
                   placeholder="e.g. 25 MT"
                 />
               </div>
@@ -197,7 +197,7 @@ export default function InquiryForm() {
                   value={form.message}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full bg-[#0d2318] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700 resize-none"
+                  className="w-full bg-[#0b1527] border border-green-800/60 text-white text-sm px-4 py-3 focus:outline-none focus:border-green-600 placeholder:text-green-700 resize-none"
                   placeholder="Packing requirements, destination port, or any other details…"
                 />
               </div>
