@@ -1,5 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#1B4332",
+};
 
 export const metadata: Metadata = {
   title: "Lavish Foods — Premium Pakistani Basmati Rice Exporter",
@@ -20,7 +24,6 @@ export const metadata: Metadata = {
     description:
       "Premium Pakistani Basmati rice exporter — 1121, Super Kernel, PK-386, IRRI varieties.",
   },
-  themeColor: "#1B4332",
   keywords: [
     "basmati rice exporter",
     "Pakistani rice",
